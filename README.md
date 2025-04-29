@@ -1,1 +1,3 @@
-# Cube672 Official
+# Cube672 Official Website
+
+https://cube672.github.io/website/
