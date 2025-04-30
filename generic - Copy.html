@@ -1,63 +1,180 @@
 <!DOCTYPE HTML>
-<!--
-	Hyperspace by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
-	<head>
-		<title>Generic - Hyperspace by HTML5 UP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<head>
+	<title>Texture Pack Museum</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, viewport-fit=cover" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	<style>
+		.card {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			background-color: #2c003e;
+			color: white;
+			border-radius: 10px;
+			overflow: hidden;
+			margin-bottom: 20px;
+			box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+			position: relative;
+		}
 
-		<!-- Header -->
-			<header id="header">
-				<a href="index.html" class="title">Hyperspace</a>
-				<nav>
-					<ul>
-						<li><a href="index.html">Home</a></li>
-						<li><a href="generic.html" class="active">Generic</a></li>
-						<li><a href="elements.html">Elements</a></li>
-					</ul>
-				</nav>
-			</header>
+		.card img {
+			width: 150px;
+			height: 150px;
+			object-fit: cover;
+		}
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+		.card-content {
+			padding: 20px;
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+		}
 
-				<!-- Main -->
-					<section id="main" class="wrapper">
-						<div class="inner">
-							<h1 class="major">A Generic Page</h1>
-							<span class="image fit"><img src="images/pic04.jpg" alt="" /></span>
-							<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique.</p>
-							<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p>
-						</div>
-					</section>
+		.card-content h2 {
+			margin: 0 0 10px 0;
+			font-size: 1.5em;
+		}
 
-			</div>
+		.card-content p {
+			margin: 0;
+		}
 
-		<!-- Footer -->
-			<footer id="footer" class="wrapper alt">
-				<div class="inner">
-					<ul class="menu">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
+		.button {
+			background-color: #2c003e;
+			color: white;
+			padding: 10px 20px;
+			border-radius: 5px;
+			text-decoration: none;
+			font-size: 1em;
+			display: inline-block;
+		}
+
+		.button:hover {
+			background-color: #1a0027;
+		}
+
+		.visit-website-button {
+			position: absolute;
+			right: 20px;
+			bottom: 20px;
+		}
+
+		@media (max-width: 768px) {
+			.card {
+				flex-direction: column;
+				align-items: flex-start;
+			}
+			.card img {
+				width: 100%;
+				height: auto;
+			}
+			.visit-website-button {
+				position: static;
+				margin-top: 10px;
+				align-self: flex-end;
+			}
+		}
+
+		@media (max-width: 480px) {
+			body {
+				font-size: 0.95em;
+			}
+			.card-content h2 {
+				font-size: 1.2em;
+			}
+		}
+	</style>
+</head>
+<body class="is-preload">
+
+	<!-- Header -->
+	<header id="header">
+		<a href="index.html" class="title">Cube672</a>
+		<nav>
+			<ul></ul>
+		</nav>
+	</header>
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+		<!-- Main -->
+		<section id="main" class="wrapper">
+			<div class="inner">
+				<h1 class="major">Texture Pack Menu</h1>
+
+				<!-- Cards -->
+				<div class="card">
+					<img src="images/pic04.jpg" alt="Bloxd Events T-Pack" />
+					<div class="card-content">
+						<h2>Bloxd Events T-Pack</h2>
+						<p>This is a pack made for @Parkour_Queen_YT's Bloxd Tier Testing | EVENTS server.</p>
+						<a href="https://parkourqueenyt.github.io/Bloxd.io-texturepacks/" class="button visit-website-button">Go to downloads</a>
+					</div>
 				</div>
-			</footer>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+				<div class="card">
+					<img src="images/pic02.jpg" alt="Placeholder Pack" />
+					<div class="card-content">
+						<h2>This Could Be Yours</h2>
+						<p>DM me to see how.</p>
+					</div>
+				</div>
 
-	</body>
+				<div class="card">
+					<img src="images/pic03.jpg" alt="Placeholder Pack" />
+					<div class="card-content">
+						<h2>This Could Be Yours</h2>
+						<p>DM me to see how.</p>
+					</div>
+				</div>
+
+				<div class="card">
+					<img src="images/pic02.jpg" alt="Placeholder Pack" />
+					<div class="card-content">
+						<h2>This Could Be Yours</h2>
+						<p>DM me to see how.</p>
+					</div>
+				</div>
+
+				<div class="card">
+					<img src="images/pic05.jpg" alt="Placeholder Pack" />
+					<div class="card-content">
+						<h2>This Could Be Yours</h2>
+						<p>DM me to see how.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Back Button -->
+		<div style="text-align: center; margin-top: 40px;">
+			<a href="index.html#one" class="button">
+				&larr; Back
+			</a>
+		</div>
+	</div>
+
+	<!-- Footer -->
+	<footer id="footer" class="wrapper alt">
+		<div class="inner">
+			<ul class="menu">
+				<li>&copy; Cube672. All rights reserved.</li>
+			</ul>
+		</div>
+	</footer>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
 </html>
