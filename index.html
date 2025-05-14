@@ -12,90 +12,105 @@
 	<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
 	<style>
-		/* Dark mode overrides */
-		body, html {
-			background-color: #121212;
-			color: #e0e0e0;
+		/* =========================
+		   Dark‑mode purple theme
+		   ========================= */
+
+		:root {
+			--bg-primary: #121212;
+			--bg-secondary: #1e1e1e;
+			--bg-tertiary: #1a1a1a;
+			--text-primary: #e0e0e0;
+			--text-heading: #ffffff;
+			--accent: #bb86fc;          /* main purple accent */
+			--accent-hover: #d5b8ff;   /* lighter purple on hover */
+		}
+
+		/* Global backgrounds & text */
+		html, body {
+			background-color: var(--bg-primary);
+			color: var(--text-primary);
 		}
 
 		.wrapper {
-			background-color: #1e1e1e;
-			color: #e0e0e0;
+			background-color: var(--bg-secondary);
+			color: var(--text-primary);
 		}
 
 		.wrapper.style1,
 		.wrapper.style2,
 		.wrapper.style3,
 		.wrapper.style1-alt {
-			background-color: #1a1a1a !important;
-			color: #e0e0e0 !important;
+			background-color: var(--bg-tertiary) !important;
+			color: var(--text-primary) !important;
 		}
 
-		.wrapper.style2.spotlights section:nth-child(even),
-		.wrapper.style2.spotlights section:nth-child(odd) {
-			background-color: #1a1a1a;
+		.wrapper.style2.spotlights section {
+			background-color: var(--bg-tertiary);
 		}
 
-		.wrapper.style3.fade-up {
-			background-color: #1f1f1f;
-		}
-
+		/* Sidebar */
 		#sidebar {
 			background-color: #111;
 		}
 
 		#sidebar nav ul li a {
-			color: #ccc;
+			color: #cfcfcf;
 		}
 
 		#sidebar nav ul li a:hover {
-			color: #00ff88;
+			color: var(--accent);
 		}
 
-		.button {
-			background-color: #333;
-			color: #00ff88;
-			border: 1px solid #00ff88;
-		}
-
-		.button:hover {
-			background-color: #00ff88;
-			color: #121212;
-		}
-
+		/* Headings */
 		h1, h2, h3, h4, h5, h6 {
-			color: #ffffff;
+			color: var(--text-heading);
 		}
 
+		/* Links */
 		a {
-			color: #00ff88;
+			color: var(--accent);
 		}
 
 		a:hover {
-			color: #55ffaa;
+			color: var(--accent-hover);
 		}
 
+		/* Buttons */
+		.button {
+			background-color: #333;
+			color: var(--accent);
+			border: 1px solid var(--accent);
+			transition: all 0.2s ease;
+		}
+
+		.button:hover {
+			background-color: var(--accent);
+			color: var(--bg-primary);
+		}
+
+		/* Footer */
 		#footer {
 			background-color: #101010;
 			color: #888;
 		}
 
 		#footer a {
-			color: #00ff88;
+			color: var(--accent);
 		}
 
-		.full-image img {
-			width: 100%;
-			height: auto;
-			object-fit: contain;
-			filter: brightness(0.9);
-		}
-
+		/* Copy confirmation */
 		.copy-confirm {
-			color: #00ff88;
+			color: var(--accent);
 			font-size: 0.9em;
 			display: none;
 			margin-top: 0.5em;
+		}
+
+		/* Images */
+		.image img,
+		.full-image img {
+			filter: brightness(0.9);
 		}
 	</style>
 </head>
@@ -262,7 +277,6 @@
 	}
 	window.onbeforeunload = null;
 </script>
-
 <script>
 	if (window.history.replaceState) {
 		window.history.replaceState(null, null, window.location.href);
