@@ -4,27 +4,78 @@
 	<title>Texture Pack Museum</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, viewport-fit=cover" />
+	<link rel="icon" href="https://i.postimg.cc/rw58898z/Magic-pfp-circle.png" type="image/png" /> <!-- Favicon -->
 	<link rel="stylesheet" href="assets/css/main.css" />
 	<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
 	<style>
+		/* =========================
+		   Dark‑mode purple theme
+		   ========================= */
+
 		:root {
-			--bg-color: #1e1e1e;
-			--text-color: #eaeaea;
-			--link-color: #9b59b6; /* Purple link color */
-			--accent-color: #9b59b6; /* Purple accent color */
-			--accent-hover: #8e44ad; /* Slightly darker purple for hover effect */
-			--footer-bg: #333;
-			--button-bg: #2c003e; /* Purple background for button */
-			--button-hover-bg: #1a0027; /* Darker purple for button hover */
-			--button-active-bg: #1d5e91; /* Darker blue when clicked */
+			--bg-primary: #121212;
+			--bg-secondary: #1e1e1e;
+			--bg-tertiary: #1a1a1a;
+			--text-primary: #e0e0e0;
+			--text-heading: #ffffff;
+			--accent: #bb86fc; /* main purple accent */
+			--accent-hover: #d5b8ff; /* lighter purple on hover */
+			--button-bg: #2c003e;
+			--button-hover-bg: #1a0027;
+			--button-active-bg: #1d5e91;
 		}
 
-		body {
-			background-color: var(--bg-color);
-			color: var(--text-color);
-			font-family: Arial, sans-serif;
+		/* Global backgrounds & text */
+		html, body {
+			background-color: var(--bg-primary);
+			color: var(--text-primary);
 		}
 
+		.wrapper {
+			background-color: var(--bg-secondary);
+			color: var(--text-primary);
+		}
+
+		.wrapper.style1,
+		.wrapper.style2,
+		.wrapper.style3,
+		.wrapper.style1-alt {
+			background-color: var(--bg-tertiary) !important;
+			color: var(--text-primary) !important;
+		}
+
+		/* Sidebar */
+		#sidebar {
+			background-color: #111;
+			position: fixed;
+			width: 200px;
+			height: 100%;
+			top: 0;
+			left: 0;
+			padding: 20px;
+		}
+
+		#sidebar nav ul {
+			list-style-type: none;
+			padding: 0;
+		}
+
+		#sidebar nav ul li a {
+			color: #cfcfcf;
+			text-decoration: none;
+			display: block;
+			padding: 10px;
+			border-radius: 5px;
+			transition: all 0.3s ease;
+		}
+
+		#sidebar nav ul li a:hover {
+			background-color: var(--accent);
+			color: var(--bg-primary);
+		}
+
+		/* Main content styles */
 		.card {
 			display: flex;
 			flex-direction: row;
@@ -63,21 +114,21 @@
 
 		/* Button styles */
 		.button {
-			background-color: var(--button-bg); 
+			background-color: var(--button-bg);
 			color: white;
-			padding: 4px 15px; /* Reduced height compared to previous style */
+			padding: 4px 15px;
 			border-radius: 30px;
 			text-decoration: none;
-			font-size: 0.9em; /* Smaller font size for a compact button */
+			font-size: 0.9em;
 			display: inline-block;
 		}
 
 		.button:hover {
-			background-color: var(--button-hover-bg); 
+			background-color: var(--button-hover-bg);
 		}
 
 		.button:active {
-			background-color: var(--button-active-bg); 
+			background-color: var(--button-active-bg);
 		}
 
 		.visit-website-button {
@@ -114,15 +165,15 @@
 		#header {
 			background-color: var(--bg-color);
 			color: var(--text-color);
-			border-bottom: 1px solid var(--accent-color);
+			border-bottom: 1px solid var(--accent);
 		}
 
 		#header .title {
-			color: var(--accent-color);
+			color: var(--accent);
 		}
 
 		#header a {
-			color: var(--accent-color);
+			color: var(--accent);
 		}
 
 		#header a:hover {
@@ -132,7 +183,7 @@
 		#footer {
 			background-color: var(--footer-bg);
 			color: var(--text-color);
-			border-top: 1px solid var(--accent-color);
+			border-top: 1px solid var(--accent);
 		}
 
 		#footer .menu li {
@@ -141,7 +192,7 @@
 
 		/* Card content link */
 		.card-content a {
-			color: var(--link-color);
+			color: var(--accent);
 			text-decoration: none;
 		}
 
@@ -150,18 +201,25 @@
 		}
 	</style>
 </head>
-<body class="is-preload">
+<body class="is-preload" autocomplete="off">
 
-	<!-- Header -->
-	<header id="header">
-		<a href="index.html" class="title">Cube672</a>
-		<nav>
-			<ul></ul>
-		</nav>
-	</header>
+	<!-- Sidebar -->
+	<section id="sidebar">
+		<div class="inner">
+			<nav>
+				<ul>
+					<li><a href="#intro">Welcome</a></li>
+					<li><a href="#one">Previous work</a></li>
+					<li><a href="#two">What we do</a></li>
+					<li><a href="#three">Get in touch</a></li>
+				</ul>
+			</nav>
+		</div>
+	</section>
 
 	<!-- Wrapper -->
-	<div id="wrapper">
+	<div id="wrapper" style="margin-left: 220px;">
+
 		<!-- Main -->
 		<section id="main" class="wrapper">
 			<div class="inner">
