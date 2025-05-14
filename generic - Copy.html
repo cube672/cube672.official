@@ -1,9 +1,9 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-	<title>Texture Pack Menu</title>
+	<title>Texture Pack Museum</title>
 	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, viewport-fit=cover" />
 	<link rel="icon" href="https://i.postimg.cc/rw58898z/Magic-pfp-circle.png" type="image/png" /> <!-- Favicon -->
 	<link rel="stylesheet" href="assets/css/main.css" />
 	<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
@@ -30,21 +30,27 @@
 		html, body {
 			background-color: var(--bg-primary);
 			color: var(--text-primary);
-			font-family: Arial, sans-serif;
 		}
 
 		.wrapper {
 			background-color: var(--bg-secondary);
 			color: var(--text-primary);
-			padding: 20px;
 		}
 
-		/* Card styles */
+		.wrapper.style1,
+		.wrapper.style2,
+		.wrapper.style3,
+		.wrapper.style1-alt {
+			background-color: var(--bg-tertiary) !important;
+			color: var(--text-primary) !important;
+		}
+
+		/* Main content styles */
 		.card {
 			display: flex;
 			flex-direction: row;
 			align-items: center;
-			background-color: var(--bg-tertiary);
+			background-color: #2c003e;
 			color: white;
 			border-radius: 10px;
 			overflow: hidden;
@@ -80,12 +86,11 @@
 		.button {
 			background-color: var(--button-bg);
 			color: white;
-			padding: 8px 20px;
+			padding: 4px 15px;
 			border-radius: 30px;
 			text-decoration: none;
-			font-size: 1em;
+			font-size: 0.9em;
 			display: inline-block;
-			transition: all 0.3s ease;
 		}
 
 		.button:hover {
@@ -96,25 +101,21 @@
 			background-color: var(--button-active-bg);
 		}
 
-		/* Back Button */
 		.visit-website-button {
 			position: absolute;
 			right: 20px;
 			bottom: 20px;
 		}
 
-		/* Responsiveness */
 		@media (max-width: 768px) {
 			.card {
 				flex-direction: column;
 				align-items: flex-start;
 			}
-
 			.card img {
 				width: 100%;
 				height: auto;
 			}
-
 			.visit-website-button {
 				position: static;
 				margin-top: 10px;
@@ -126,74 +127,103 @@
 			body {
 				font-size: 0.95em;
 			}
-
 			.card-content h2 {
 				font-size: 1.2em;
 			}
 		}
 
-		/* Footer */
+		#header {
+			background-color: var(--bg-color);
+			color: var(--text-color);
+			border-bottom: 1px solid var(--accent);
+		}
+
+		#header .title {
+			color: var(--accent);
+		}
+
+		#header a {
+			color: var(--accent);
+		}
+
+		#header a:hover {
+			color: var(--accent-hover);
+		}
+
 		#footer {
-			background-color: var(--bg-tertiary);
-			color: var(--text-primary);
+			background-color: var(--footer-bg);
+			color: var(--text-color);
 			border-top: 1px solid var(--accent);
-			padding: 20px;
-			text-align: center;
 		}
 
 		#footer .menu li {
-			color: var(--text-primary);
+			color: var(--text-color);
+		}
+
+		/* Card content link */
+		.card-content a {
+			color: var(--accent);
+			text-decoration: none;
+		}
+
+		.card-content a:hover {
+			color: var(--accent-hover);
 		}
 	</style>
 </head>
 <body class="is-preload" autocomplete="off">
 
 	<!-- Wrapper -->
-	<div class="wrapper">
+	<div id="wrapper">
 
-		<h1 class="major">Texture Pack Menu</h1>
+		<!-- Main -->
+		<section id="main" class="wrapper">
+			<div class="inner">
+				<h1 class="major">Texture Pack Menu</h1>
 
-		<!-- Cards Section -->
-		<div class="card">
-			<img src="images/pic04.jpg" alt="Bloxd Events T-Pack" />
-			<div class="card-content">
-				<h2>Bloxd Events T-Pack</h2>
-				<p>This is a pack made for @Parkour_Queen_YT's Bloxd Tier Testing | EVENTS server.</p>
-				<a href="https://parkourqueenyt.github.io/Bloxd.io-texturepacks/" class="button visit-website-button">Go to downloads</a>
+				<!-- Cards -->
+				<div class="card">
+					<img src="images/pic04.jpg" alt="Bloxd Events T-Pack" />
+					<div class="card-content">
+						<h2>Bloxd Events T-Pack</h2>
+						<p>This is a pack made for @Parkour_Queen_YT's Bloxd Tier Testing | EVENTS server.</p>
+						<a href="https://parkourqueenyt.github.io/Bloxd.io-texturepacks/" class="button visit-website-button">Go to downloads</a>
+					</div>
+				</div>
+
+				<div class="card">
+					<img src="images/pic02.jpg" alt="Placeholder Pack" />
+					<div class="card-content">
+						<h2>This Could Be Yours</h2>
+						<p>DM me to see how.</p>
+					</div>
+				</div>
+
+				<div class="card">
+					<img src="images/pic03.jpg" alt="Placeholder Pack" />
+					<div class="card-content">
+						<h2>This Could Be Yours</h2>
+						<p>DM me to see how.</p>
+					</div>
+				</div>
+
+				<div class="card">
+					<img src="images/pic02.jpg" alt="Placeholder Pack" />
+					<div class="card-content">
+						<h2>This Could Be Yours</h2>
+						<p>DM me to see how.</p>
+					</div>
+				</div>
+
+				<div class="card">
+					<img src="images/pic05.jpg" alt="Placeholder Pack" />
+					<div class="card-content">
+						<h2>This Could Be Yours</h2>
+						<p>DM me to see how.</p>
+					</div>
+				</div>
 			</div>
-		</div>
-
-		<div class="card">
-			<img src="images/pic02.jpg" alt="Placeholder Pack" />
-			<div class="card-content">
-				<h2>This Could Be Yours</h2>
-				<p>DM me to see how.</p>
-			</div>
-		</div>
-
-		<div class="card">
-			<img src="images/pic03.jpg" alt="Placeholder Pack" />
-			<div class="card-content">
-				<h2>This Could Be Yours</h2>
-				<p>DM me to see how.</p>
-			</div>
-		</div>
-
-		<div class="card">
-			<img src="images/pic02.jpg" alt="Placeholder Pack" />
-			<div class="card-content">
-				<h2>This Could Be Yours</h2>
-				<p>DM me to see how.</p>
-			</div>
-		</div>
-
-		<div class="card">
-			<img src="images/pic05.jpg" alt="Placeholder Pack" />
-			<div class="card-content">
-				<h2>This Could Be Yours</h2>
-				<p>DM me to see how.</p>
-			</div>
-		</div>
+		</section>
 
 		<!-- Back Button -->
 		<div style="text-align: center; margin-top: 40px;">
@@ -201,11 +231,10 @@
 				&larr; Back
 			</a>
 		</div>
-
 	</div>
 
 	<!-- Footer -->
-	<footer id="footer">
+	<footer id="footer" class="wrapper alt">
 		<div class="inner">
 			<ul class="menu">
 				<li>&copy; Cube672. All rights reserved.</li>
