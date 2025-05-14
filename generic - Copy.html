@@ -1,9 +1,9 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-	<title>Texture Pack Museum</title>
+	<title>Texture Pack Menu</title>
 	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, viewport-fit=cover" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="icon" href="https://i.postimg.cc/rw58898z/Magic-pfp-circle.png" type="image/png" /> <!-- Favicon -->
 	<link rel="stylesheet" href="assets/css/main.css" />
 	<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
@@ -30,57 +30,21 @@
 		html, body {
 			background-color: var(--bg-primary);
 			color: var(--text-primary);
+			font-family: Arial, sans-serif;
 		}
 
 		.wrapper {
 			background-color: var(--bg-secondary);
 			color: var(--text-primary);
-		}
-
-		.wrapper.style1,
-		.wrapper.style2,
-		.wrapper.style3,
-		.wrapper.style1-alt {
-			background-color: var(--bg-tertiary) !important;
-			color: var(--text-primary) !important;
-		}
-
-		/* Sidebar */
-		#sidebar {
-			background-color: #111;
-			position: fixed;
-			width: 200px;
-			height: 100%;
-			top: 0;
-			left: 0;
 			padding: 20px;
 		}
 
-		#sidebar nav ul {
-			list-style-type: none;
-			padding: 0;
-		}
-
-		#sidebar nav ul li a {
-			color: #cfcfcf;
-			text-decoration: none;
-			display: block;
-			padding: 10px;
-			border-radius: 5px;
-			transition: all 0.3s ease;
-		}
-
-		#sidebar nav ul li a:hover {
-			background-color: var(--accent);
-			color: var(--bg-primary);
-		}
-
-		/* Main content styles */
+		/* Card styles */
 		.card {
 			display: flex;
 			flex-direction: row;
 			align-items: center;
-			background-color: #2c003e;
+			background-color: var(--bg-tertiary);
 			color: white;
 			border-radius: 10px;
 			overflow: hidden;
@@ -116,11 +80,12 @@
 		.button {
 			background-color: var(--button-bg);
 			color: white;
-			padding: 4px 15px;
+			padding: 8px 20px;
 			border-radius: 30px;
 			text-decoration: none;
-			font-size: 0.9em;
+			font-size: 1em;
 			display: inline-block;
+			transition: all 0.3s ease;
 		}
 
 		.button:hover {
@@ -131,21 +96,25 @@
 			background-color: var(--button-active-bg);
 		}
 
+		/* Back Button */
 		.visit-website-button {
 			position: absolute;
 			right: 20px;
 			bottom: 20px;
 		}
 
+		/* Responsiveness */
 		@media (max-width: 768px) {
 			.card {
 				flex-direction: column;
 				align-items: flex-start;
 			}
+
 			.card img {
 				width: 100%;
 				height: auto;
 			}
+
 			.visit-website-button {
 				position: static;
 				margin-top: 10px;
@@ -157,117 +126,74 @@
 			body {
 				font-size: 0.95em;
 			}
+
 			.card-content h2 {
 				font-size: 1.2em;
 			}
 		}
 
-		#header {
-			background-color: var(--bg-color);
-			color: var(--text-color);
-			border-bottom: 1px solid var(--accent);
-		}
-
-		#header .title {
-			color: var(--accent);
-		}
-
-		#header a {
-			color: var(--accent);
-		}
-
-		#header a:hover {
-			color: var(--accent-hover);
-		}
-
+		/* Footer */
 		#footer {
-			background-color: var(--footer-bg);
-			color: var(--text-color);
+			background-color: var(--bg-tertiary);
+			color: var(--text-primary);
 			border-top: 1px solid var(--accent);
+			padding: 20px;
+			text-align: center;
 		}
 
 		#footer .menu li {
-			color: var(--text-color);
-		}
-
-		/* Card content link */
-		.card-content a {
-			color: var(--accent);
-			text-decoration: none;
-		}
-
-		.card-content a:hover {
-			color: var(--accent-hover);
+			color: var(--text-primary);
 		}
 	</style>
 </head>
 <body class="is-preload" autocomplete="off">
 
-	<!-- Sidebar -->
-	<section id="sidebar">
-		<div class="inner">
-			<nav>
-				<ul>
-					<li><a href="#intro">Welcome</a></li>
-					<li><a href="#one">Previous work</a></li>
-					<li><a href="#two">What we do</a></li>
-					<li><a href="#three">Get in touch</a></li>
-				</ul>
-			</nav>
-		</div>
-	</section>
-
 	<!-- Wrapper -->
-	<div id="wrapper" style="margin-left: 220px;">
+	<div class="wrapper">
 
-		<!-- Main -->
-		<section id="main" class="wrapper">
-			<div class="inner">
-				<h1 class="major">Texture Pack Menu</h1>
+		<h1 class="major">Texture Pack Menu</h1>
 
-				<!-- Cards -->
-				<div class="card">
-					<img src="images/pic04.jpg" alt="Bloxd Events T-Pack" />
-					<div class="card-content">
-						<h2>Bloxd Events T-Pack</h2>
-						<p>This is a pack made for @Parkour_Queen_YT's Bloxd Tier Testing | EVENTS server.</p>
-						<a href="https://parkourqueenyt.github.io/Bloxd.io-texturepacks/" class="button visit-website-button">Go to downloads</a>
-					</div>
-				</div>
-
-				<div class="card">
-					<img src="images/pic02.jpg" alt="Placeholder Pack" />
-					<div class="card-content">
-						<h2>This Could Be Yours</h2>
-						<p>DM me to see how.</p>
-					</div>
-				</div>
-
-				<div class="card">
-					<img src="images/pic03.jpg" alt="Placeholder Pack" />
-					<div class="card-content">
-						<h2>This Could Be Yours</h2>
-						<p>DM me to see how.</p>
-					</div>
-				</div>
-
-				<div class="card">
-					<img src="images/pic02.jpg" alt="Placeholder Pack" />
-					<div class="card-content">
-						<h2>This Could Be Yours</h2>
-						<p>DM me to see how.</p>
-					</div>
-				</div>
-
-				<div class="card">
-					<img src="images/pic05.jpg" alt="Placeholder Pack" />
-					<div class="card-content">
-						<h2>This Could Be Yours</h2>
-						<p>DM me to see how.</p>
-					</div>
-				</div>
+		<!-- Cards Section -->
+		<div class="card">
+			<img src="images/pic04.jpg" alt="Bloxd Events T-Pack" />
+			<div class="card-content">
+				<h2>Bloxd Events T-Pack</h2>
+				<p>This is a pack made for @Parkour_Queen_YT's Bloxd Tier Testing | EVENTS server.</p>
+				<a href="https://parkourqueenyt.github.io/Bloxd.io-texturepacks/" class="button visit-website-button">Go to downloads</a>
 			</div>
-		</section>
+		</div>
+
+		<div class="card">
+			<img src="images/pic02.jpg" alt="Placeholder Pack" />
+			<div class="card-content">
+				<h2>This Could Be Yours</h2>
+				<p>DM me to see how.</p>
+			</div>
+		</div>
+
+		<div class="card">
+			<img src="images/pic03.jpg" alt="Placeholder Pack" />
+			<div class="card-content">
+				<h2>This Could Be Yours</h2>
+				<p>DM me to see how.</p>
+			</div>
+		</div>
+
+		<div class="card">
+			<img src="images/pic02.jpg" alt="Placeholder Pack" />
+			<div class="card-content">
+				<h2>This Could Be Yours</h2>
+				<p>DM me to see how.</p>
+			</div>
+		</div>
+
+		<div class="card">
+			<img src="images/pic05.jpg" alt="Placeholder Pack" />
+			<div class="card-content">
+				<h2>This Could Be Yours</h2>
+				<p>DM me to see how.</p>
+			</div>
+		</div>
 
 		<!-- Back Button -->
 		<div style="text-align: center; margin-top: 40px;">
@@ -275,10 +201,11 @@
 				&larr; Back
 			</a>
 		</div>
+
 	</div>
 
 	<!-- Footer -->
-	<footer id="footer" class="wrapper alt">
+	<footer id="footer">
 		<div class="inner">
 			<ul class="menu">
 				<li>&copy; Cube672. All rights reserved.</li>
